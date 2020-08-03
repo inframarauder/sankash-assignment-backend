@@ -11,7 +11,7 @@ app.use(bodyparser.json());
 app.use(cors());
 
 mongoose
-  .connect("mongodb://localhost:27017/sankash", {
+  .connect(process.env.DB_URI, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
